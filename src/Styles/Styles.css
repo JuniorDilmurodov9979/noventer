@@ -1,0 +1,58 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.custom-dropdown .ant-select-item-option-selected {
+  background-color: #0e041d !important; /* Match dropdown background */
+  color: white !important; /* Ensure selected text is white */
+}
+
+.custom-dropdown .ant-select-item-option-active {
+  background-color: #1e0a3d !important; /* Optional: Highlight on hover */
+}
+
+.container_custom {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.container_full {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.hero {
+  background-image: url("/images/heroPc.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  /* background-size: cover; */
+}
+@media screen and (max-width: 1024px) {
+  .hero {
+    background-image: url("/images/mobile_heroPc.png");
+    background-position: calc(100% + 70px) 100%;
+  }
+}
+.hero_inner {
+  width: 700px;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(90, 0, 219, 0.3) 20%,
+    rgba(14, 4, 29, 0.8) 80%
+  );
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px); /* For Safari */
+  z-index: 0;
+}
+.service__item {
+  width: 434px;
+  /* width: 100%; */
+  min-height: 438px;
+  padding: 54px 34px 34px;
+}
