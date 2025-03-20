@@ -1,4 +1,6 @@
 import React from "react";
+import heroPc from "/images/heroPc.png";
+import mobileHeroPc from "/images/mobile_heroPc.png";
 const icons = [
   { src: "/icons/hero1.png", title: "7+ yillik", subtitle: "Umumiy tajriba" },
   { src: "/icons/hero2.png", title: "5+", subtitle: "Yirik loyihalar" },
@@ -48,7 +50,20 @@ const Hero = () => {
       </div>
 
       {/* Background Image */}
-      <div className="hero__bg absolute inset-0 bg-hero-pattern"></div>
+      <div
+        className="hero__bg md:hidden absolute inset-0  "
+        style={{
+          backgroundImage: `url(${mobileHeroPc})`,
+        }}
+      ></div>
+
+      {/* Desktop Background (visible on md+ screens) */}
+      <div
+        className="hero__bg hidden md:block absolute inset-0 "
+        style={{
+          backgroundImage: `url(${heroPc})`,
+        }}
+      ></div>
 
       <div className="container_custom mx-auto relative z-10">
         {/* Title Section */}
