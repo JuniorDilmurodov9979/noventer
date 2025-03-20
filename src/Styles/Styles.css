@@ -30,7 +30,7 @@ html {
   /* background-size: cover; */
 }
 .hero__bg {
-  background-image: url("./images/heroPc.png");
+  background-image: url("../../public/images/heroPc.png");
   background-repeat: no-repeat;
   background-position: right bottom;
 }
@@ -40,7 +40,7 @@ html {
 }
 @media screen and (max-width: 1024px) {
   .hero__bg {
-    background-image: url("./images/mobile_heroPc.png");
+    background-image: url("../../public/images/mobile_heroPc.png");
     background-position: calc(100% + 70px) 100%;
   }
 }
