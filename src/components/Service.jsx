@@ -60,8 +60,11 @@ const services = [
 
 const Service = () => {
   return (
-    <section id="services_id" className="bg-[#0E041D] pt-10 pb-16">
-      <div className="container mx-auto px-4">
+    <section
+      id="services_id"
+      className="bg-[#0E041D] overflow-hidden relative z-10 pt-10 pb-50"
+    >
+      <div className="container mx-auto relative z-10 px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-white font-bold text-3xl sm:text-4xl md:text-5xl">
@@ -100,6 +103,35 @@ const Service = () => {
           ))}
         </ul>
       </div>
+      <div
+        className="absolute w-[70vw] h-[70vh] md:w-60 md:h-60 rounded-full opacity-90 z-1 md:top-[35%] md:right-[0%] right-[-50%] top-[8%] "
+        style={{
+          background:
+            "radial-gradient(circle, rgba(77,9,184,0.8) 40%, rgba(0,0,0,0) 80%)",
+          filter: "blur(50px)",
+          transform: "translate(-50%, -50%)",
+        }}
+      ></div>
+      <div
+        className="absolute w-[70vw] h-[70vh] md:w-70 md:h-70 rounded-full opacity-90 z-0 md:top-[43%] left-[15%] "
+        style={{
+          background:
+            "radial-gradient(circle, rgba(77,9,184,0.8) 40%, rgba(0,0,0,0) 80%)",
+          filter: "blur(60px)",
+          top: "43%",
+          left: "15%",
+          transform: "translate(-50%, -50%)",
+        }}
+      ></div>
+      <div
+        className="absolute w-[70vw] h-[70vh] md:w-50 md:h-50 rounded-full opacity-90 z-0 md:hidden bottom-[25%] "
+        style={{
+          background:
+            "radial-gradient(circle, rgba(77,9,184,0.8) 40%, rgba(0,0,0,0) 80%)",
+          filter: "blur(60px)",
+          transform: "translate(-50%, -50%)",
+        }}
+      ></div>
     </section>
   );
 };

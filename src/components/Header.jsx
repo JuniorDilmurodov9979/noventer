@@ -17,7 +17,7 @@ const Header = () => {
       <div className="container_custom">
         <div className="header__inner flex flex-wrap items-center justify-between gap-4">
           {/* Left: Language Selector (Before Logo on Mobile) */}
-          <div className="language__wrapper order-1 md:order-none">
+          <div className="language__wrapper order-1 md:order-none md:hidden">
             <Select
               className="max-w-[73px]"
               suffixIcon={null}
@@ -93,7 +93,40 @@ const Header = () => {
           </nav>
 
           {/* Right: Button (Visible on Desktop) */}
-          <div className="hidden md:block order-5">
+          <div className="hidden md:flex order-5">
+            <div className="language__wrapper order-1 md:order-none">
+              <Select
+                className="max-w-[73px]"
+                suffixIcon={null}
+                defaultValue="Uz"
+                style={{
+                  width: 120,
+                  backgroundColor: "transparent",
+                  textAlign: "center",
+                  color: "white", // Ensure selected text is white
+                }}
+                dropdownStyle={{
+                  backgroundColor: "#0E041D", // Dropdown background color
+                }}
+                popupClassName="custom-dropdown" // Custom class for dropdown
+                variant="borderless"
+                onChange={handleChange}
+                options={[
+                  {
+                    value: "Uz",
+                    label: <span style={{ color: "white" }}>Uz</span>,
+                  },
+                  {
+                    value: "Ru",
+                    label: <span style={{ color: "white" }}>Ru</span>,
+                  },
+                  {
+                    value: "En",
+                    label: <span style={{ color: "white" }}>En</span>,
+                  },
+                ]}
+              />
+            </div>
             <Button
               href="#loyiha"
               style={{

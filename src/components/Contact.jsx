@@ -2,8 +2,11 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section id="loyiha" className="contact bg-[#0E041D] pt-10 pb-[140px]">
-      <div className="container_full px-4 md:px-8 lg:px-12">
+    <section
+      id="loyiha"
+      className="contact relative z-10 overflow-hidden bg-[#0E041D]  pb-[140px]"
+    >
+      <div className="container_full relative z-10 px-4 md:px-8 lg:px-12">
         <div className="flex flex-col gap-2 justify-center pt-10 pb-18 items-center text-center">
           <h3 className="text-white font-bold text-4xl sm:text-3xl">
             Biz bilan aloqa
@@ -20,7 +23,7 @@ const Contact = () => {
             <h4 className="text-2xl sm:text-xl font-semibold text-white">
               Bizning jamoa haqida
             </h4>
-            <ol className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-5 mt-5">
+            <ol className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-5 mt-5">
               {Array(9)
                 .fill(null)
                 .map((_, index) => (
@@ -28,11 +31,7 @@ const Contact = () => {
                     key={index}
                     className="flex items-center gap-3 p-3 bg-[#FFFFFF1A] rounded-2xl"
                   >
-                    <img
-                      className="bg-white rounded-lg w-16 h-16 sm:w-12 sm:h-12"
-                      src=""
-                      alt=""
-                    />
+                    <span className="bg-white rounded-lg w-16 h-16 sm:w-12 sm:h-12"></span>
                     <div className="flex flex-col gap-1">
                       <h5 className="text-lg leading-[22px] font-medium text-white sm:text-base">
                         Xusanov <br /> Alibek
@@ -74,6 +73,33 @@ const Contact = () => {
           </li>
         </ul>
       </div>
+      <div
+        className="absolute w-[60vw] h-[60vh] md:w-60 md:h-60 rounded-full opacity-90 z-1 md:top-[20%] md:right-[80%] right-[20%] top-[70%] "
+        style={{
+          background:
+            "radial-gradient(circle, rgba(77,9,184,0.8) 40%, rgba(0,0,0,0) 80%)",
+          filter: "blur(60px)",
+          transform: "translate(-50%, -50%)",
+        }}
+      ></div>
+      <div
+        className="absolute w-[70vw] h-[70vh] md:w-60 md:h-60 rounded-full opacity-90 z-1 md:top-[80%] md:right-[-25%] right-[-70%] top-[10%] "
+        style={{
+          background:
+            "radial-gradient(circle, rgba(77,9,184,0.8) 40%, rgba(0,0,0,0) 80%)",
+          filter: "blur(60px)",
+          transform: "translate(-50%, -50%)",
+        }}
+      ></div>
+      <div
+        className="absolute w-[60vw] h-[60vh]  rounded-full opacity-90 z-1 md:hidden right-[-50%] bottom-[-10%] "
+        style={{
+          background:
+            "radial-gradient(circle, rgba(77,9,184,0.8) 40%, rgba(0,0,0,0) 80%)",
+          filter: "blur(60px)",
+          transform: "translate(-50%, -50%)",
+        }}
+      ></div>
     </section>
   );
 };

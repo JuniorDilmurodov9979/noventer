@@ -5,17 +5,17 @@ import aboutImg3 from "/images/about3.png";
 
 const About = () => {
   return (
-    <section className="about bg-[#0E041D]">
-      <div className="bg-[#5A00DB] py-10 pb-8 flex flex-col items-center text-center gap-2">
-        <div className="container mx-auto px-4 text-start">
+    <section className="about relative  bg-[#0E041D] overflow-hidden">
+      <div className="bg-[#5A00DB] relative z-10  py-10 pb-8 flex flex-col items-center text-center gap-2">
+        <div className="container mx-auto px-4  text-start">
           <h2 className="font-bold text-3xl sm:text-4xl md:text-5xl text-white">
             Biz haqimizda
           </h2>
           <p className="text-base sm:text-lg text-white">Qisqacha ma’lumot</p>
         </div>
       </div>
-      <div className="container_custom px-4">
-        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10 pt-10 pb-8">
+      <div className="container_custom relative z-10 px-4">
+        <ul className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 gap-6 md:gap-10 pt-10 pb-8">
           {[aboutImg1, aboutImg2, aboutImg3].map((img, index) => (
             <li
               key={index}
@@ -51,6 +51,36 @@ const About = () => {
           unchanged.
         </p>
       </div>
+      <div
+        className="absolute w-[70vw] h-[70vh] md:w-60 md:h-60 rounded-full opacity-90 z-1  top-[30%] right-[-60%] md:left-[34%] md:top-[60%] "
+        style={{
+          background:
+            "radial-gradient(circle, rgba(77,9,184,0.8) 40%, rgba(0,0,0,0) 80%)",
+          filter: "blur(50px)",
+          transform: "translate(-50%, -50%)",
+        }}
+      ></div>
+      <div
+        className="absolute w-[70vw] h-[70vh] md:w-70 md:h-70 rounded-full opacity-90 z-1 md:bottom-[-10%] md:right-[-20%] bottom-[30%] right-[20%] "
+        style={{
+          background:
+            "radial-gradient(circle, rgba(77,9,184,0.8) 40%, rgba(0,0,0,0) 80%)",
+          filter: "blur(60px)",
+          transform: "translate(-50%, -50%)",
+        }}
+      ></div>
+
+      <div
+        className="absolute w-[70vw] h-[70vh] rounded-full sm:hidden opacity-90 z-1  "
+        style={{
+          background:
+            "radial-gradient(circle, rgba(77,9,184,0.8) 40%, rgba(0,0,0,0) 80%)",
+          filter: "blur(60px)",
+          bottom: "10%",
+          right: "-60%",
+          transform: "translate(-50%, -50%)",
+        }}
+      ></div>
     </section>
   );
 };
