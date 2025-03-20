@@ -1,5 +1,4 @@
 import React from "react";
-
 const icons = [
   { src: "/icons/hero1.png", title: "7+ yillik", subtitle: "Umumiy tajriba" },
   { src: "/icons/hero2.png", title: "5+", subtitle: "Yirik loyihalar" },
